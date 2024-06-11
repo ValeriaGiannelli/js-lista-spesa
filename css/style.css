@@ -36,6 +36,14 @@
     padding: 5px 10px;
 }
 
+/* padding per le icone inserite */
 #my_list li i{
     padding-right: 5px;
+}
+
+
+/* classe da aggiungere al click */
+.done{
+    color: gray;
+    text-decoration-line: line-through;
 }

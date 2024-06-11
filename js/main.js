@@ -16,7 +16,7 @@ const unorderList = document.getElementById("my_list");
 let i = 0; //la setto a zero, perché devo dare una condizione di partenza al ciclo successivo
 while(i < myList.length){ // metto la condizione per la quale il ciclo deve continuare
     // creo l'elemento per ogni i
-    let listItem = `<li><i class="fa-regular fa-square"></i>${myList[i]}</li>`;
+    let listItem = `<li class="item_list"><i class="fa-regular fa-square"></i>${myList[i]}</li>`;
 
     // inserisco questo elemento nel contenitore della lista
     unorderList.innerHTML += listItem;
@@ -24,3 +24,27 @@ while(i < myList.length){ // metto la condizione per la quale il ciclo deve cont
     // aumenta l'i di uno (altrimenti loop)
     i++;
 }
+
+// al click dell'icona si aggiunge una classe
+
+// prendo tutti gli item della mia lista
+let listItem = document.querySelectorAll(".item_list");
+console.log(listItem);
+
+// prendo l'elemento di pagina sulla quale deve essere fatta la cosa onclick
+// ma deve essere fatta su più elementi
+let allTickList = document.querySelectorAll(".fa-regular.fa-square");
+console.log(allTickList);
+
+// quando clicco l'icona messa all'indice 0 mi si deve aggiungere una classe allo stesso indice dell'elemento listItem
+console.log(allTickList[1]);
+
+// creo un evento di click
+allTickList[1].addEventListener("click",
+    function(){
+        listItem[1].classList.add("done");
+        // listItem.classList.add("done");
+    }
+);
+
+// come lo generalizzo????
