@@ -27,11 +27,15 @@
 /* caratteristiche lista */
 #my_list{
     text-align: start;
-    margin-left: 50px;
     font-size: 24px;
+    list-style: none;
 }
 
 #my_list li{
     border-bottom: 2px solid brown;
     padding: 5px 10px;
+}
+
+#my_list li i{
+    padding-right: 5px;
 }
