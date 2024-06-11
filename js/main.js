@@ -39,12 +39,27 @@ console.log(allTickList);
 // quando clicco l'icona messa all'indice 0 mi si deve aggiungere una classe allo stesso indice dell'elemento listItem
 console.log(allTickList[1]);
 
+
 // creo un evento di click
-allTickList[1].addEventListener("click",
-    function(){
-        listItem[1].classList.add("done");
-        // listItem.classList.add("done");
-    }
-);
+for(let j = 0; j < allTickList.length; j++){
+
+    allTickList[j].addEventListener("click",
+        function(){
+            // listItem[j].classList.toggle("done");
+
+            if(listItem[j].classList.contains("done")) {//se non presente la classe done -> aggiungi
+                listItem[j].classList.remove("done");
+                console.log(listItem[j]);
+            } else{ //se è presente -> la togli
+                listItem[j].classList.add("done");
+                console.log(listItem[j]);
+            }
+
+        }
+    )
+}
+
+
+
 
 // come lo generalizzo????
