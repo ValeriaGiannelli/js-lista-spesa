@@ -15,6 +15,12 @@ const unorderList = document.getElementById("my_list");
 // creo la variabile
 let i = 0; //la setto a zero, perché devo dare una condizione di partenza al ciclo successivo
 while(i < myList.length){ // metto la condizione per la quale il ciclo deve continuare
-    
-}
+    // creo l'elemento per ogni i
+    let listItem = `<li>${myList[i]}</li>`;
 
+    // inserisco questo elemento nel contenitore della lista
+    unorderList.innerHTML += listItem;
+
+    // aumenta l'i di uno (altrimenti loop)
+    i++;
+}
